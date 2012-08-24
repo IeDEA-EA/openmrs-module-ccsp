@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+  <changeSet author="sgithens" id="20120805-1748">
+    <comment>Create Cryo Table</comment>
+    <createTable tableName="ccsp_logbook_cryo">
+      <column name="log_id" type="int" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false" />
+      </column>
+      <column name="date" type="datetime" />
+      <column name="name" type="varchar(255)"/>
+      <column name="amrs_id" type="varchar(255)"/>
+      <column name="module" type="int" />
+      <column name="dob" type="datetime" />
+      <column name="phone" type="varchar(255)"/>
+      <column name="residence" type="varchar(255)"/>
+      <!-- end of standard columns -->
+      <column name="hiv_status" type="varchar(10)"/>
+      <column name="cryo_date" type="date" />
+      <column name="six_months_post_cryo_date" type="date" />
+      <column name="actual_return_date" type="date" />
+      <column name="enrolled" type="boolean" />
+      <column name="site" type="varchar(255)" />
+      <column name="remarks" type="varchar(255)" />
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>
