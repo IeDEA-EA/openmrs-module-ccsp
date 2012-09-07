@@ -12,6 +12,9 @@
   <packaging>jar</packaging>
   <name>CCSP Module API</name>
   <description>API project for CCSP</description>
+  <properties>
+    <maven.test.search.classdir>true</maven.test.search.classdir>
+  </properties>
 
   <dependencies>
     
@@ -75,16 +78,19 @@
   </dependencies>
   
   <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
     <resources>
       <resource>
-        <directory>src/main/resources</directory>
+        <!-- <directory>src/main/resources</directory> -->
+        <directory>resources</directory>
         <filtering>true</filtering>
       </resource>
     </resources>
 
     <testResources>
       <testResource>
-        <directory>src/test/resources</directory>
+        <directory>test</directory>
         <filtering>true</filtering>
       </testResource>
     </testResources>

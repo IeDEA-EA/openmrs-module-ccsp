@@ -34,7 +34,7 @@ public class  CcspManageController {
     @RequestMapping(value = "/module/ccsp/manage", method = RequestMethod.GET)
     public void manage(ModelMap model) {
         model.addAttribute("user", Context.getAuthenticatedUser());
-        model.addAttribute("swg", "Test Parameter");
+        model.addAttribute("swg", "Test Parameter Groovy Refactor");
     }
 	
     @RequestMapping(value = "/module/ccsp/manage", method = RequestMethod.POST)
